@@ -1,6 +1,6 @@
 services:
   c3v_npu:
-    image: c3v_npu:v0.0.3
+    image: zengping2024/c3v_npu:v0.0.3
     user: c3v
     command: sleep infinity
     network_mode: host
