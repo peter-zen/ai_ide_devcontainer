@@ -1,0 +1,11 @@
+services:
+  c3v_npu:
+    image: c3v_npu:v0.0.3
+    user: c3v
+    command: sleep infinity
+    network_mode: host
+    volumes:
+      - ..:/home/c3v/model_converter/models/mAP
+    ports:
+      - 139:139
+      - 445:445

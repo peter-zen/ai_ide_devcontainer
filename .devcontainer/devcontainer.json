@@ -1,0 +1,24 @@
+{
+    "name": "C3V NPU Dev Container",
+    "dockerComposeFile": "./docker-compose.yml",
+    "service": "c3v_npu",
+    "workspaceFolder": "/home/c3v/model_converter/models/mAP",
+    "remoteUser": "c3v",
+    "customizations": {
+        "vscode": {
+            "settings": {
+                "python.defaultInterpreterPath": "/opt/conda/envs/npu_6.33.7/bin/python",
+                "python.terminal.activateEnvironment": true
+            },
+            "extensions": [
+                "ms-python.python"
+            ]
+        }
+    },
+    "postCreateCommand": "echo 'Dev container is ready!'",
+    "postAttachCommand": "bash",
+    "containerEnv": {
+        "ACUITY_PATH": "/opt/conda/envs/npu_6.33.7/acuity_command_line_tools",
+        "IDE_PATH": "/npu/ide"
+    }
+}
